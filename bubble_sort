@@ -1,0 +1,20 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n - 1):
+        swapped = False
+        for j in range(n - 1 - i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j] 
+                swapped = True
+        if not swapped:
+            break        
+
+
+count = int(input("Թվերի քանակը: "))
+numbers = []
+for i in range(1, count + 1):
+    num = int(input(f"{i} թիվ: "))
+    numbers.append(num)
+    
+bubble_sort(numbers)
+print(numbers)        

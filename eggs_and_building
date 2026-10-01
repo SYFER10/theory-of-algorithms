@@ -1,0 +1,19 @@
+floors = int(input("Քանի հարկանի շենք է? "))
+step = 1
+while step * (step + 1) // 2 <= floors:
+    step += 1
+    print("step:", step)
+    
+print("Առավելագույն քայլերը:", step)
+
+floor = 0
+print("Գցում ենք առաջին ձուն հետևյալ հարկերից:")
+while floor < floors:
+    floor += step
+    if floor > floors:
+        floor = floors
+    print(floor)     
+    step -= 1
+    if step == 0:
+        break   
+        

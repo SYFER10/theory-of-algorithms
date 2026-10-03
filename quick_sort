@@ -1,0 +1,14 @@
+def quick_sort(arr):
+    length = len(arr)
+    if length <= 1:
+        return arr
+    pivot = arr.pop()
+    bigger = [n for n in arr if n > pivot]
+    smaller = [n for n in arr if n <= pivot]
+    return quick_sort(smaller) + [pivot] + quick_sort(bigger)
+
+arr = [5, -2, -8, 1, 3, -7]
+print(quick_sort(arr))
+
+
+ 
